@@ -1,0 +1,845 @@
+/*General*/
+
+$font: 'Montserrat', sans-serif
+$color: #8d81ac
+
+.html 
+  font-size: 16px
+
+@media screen and (max-width: 480px)
+  .html 
+    font-size: 14px
+
+.page
+  font-family: $font
+  scroll-behavior: smooth
+  overflow-x: hidden
+
+
+.list
+    padding: 0
+    list-style-type: none 
+
+.anchor
+  text-decoration: none
+
+.button
+  text-align: center
+  vertical-align: middle
+  border: none
+  background: $color
+  color: white
+  font-weight: 700
+  cursor: pointer
+  border-radius: 30px
+
+.container
+  width: 80%
+  margin: 0 auto
+
+@media screen and (max-width: 1024px)
+  .container 
+    width: 95%
+
+.logo  
+  text-transform: uppercase
+  display: flex
+  align-items: center
+  padding: 5px
+  font-family: 'Lato', sans-serif
+  font-size: 1.8rem
+  font-weight: bold
+  
+  span
+    color: $color
+
+  &::before
+    content: url('../img/Shape1.svg')
+    margin-top: 5px
+
+.box-container 
+  display: flex
+  flex-wrap: wrap
+
+.box
+  display: flex
+  flex-direction: column
+    
+
+/*header navigation*/
+
+.header
+
+  .header__wrapper
+    display: flex
+
+  .header__navigation
+    display: flex
+    flex: 1
+    justify-content: flex-end
+  
+  .header__burger
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .header__line,
+  .header__line:after,
+  .header__line:before 
+    width: 25px
+    height: 3px
+    background: black
+    border-radius: 5px
+  
+  .header__line:after,
+  .header__line:before 
+    content: ""
+    position: absolute
+    
+  .header__line:before
+    margin-left: 7px
+    width: 18px
+    transform: translateY(-10px)       
+  
+  .header__line:after  
+    transform: translateY(10px)
+  
+  .header__burger_state
+    display: none
+
+  .header__list   
+    display: flex
+    flex: 1
+    justify-content: flex-end
+
+  .header__item
+    font-weight: 700
+    align-self: center
+    flex-basis: 15%
+    text-align: center
+    padding: 5px 
+  
+  .header__anchor
+    color: $color
+
+  .header__btn
+    width: 150px
+    padding: 10px
+
+@media screen and (max-width: 768px)
+  .header
+    .header__list
+      flex: 0
+    
+    .header__item
+      display: none
+
+    .header__item:last-child
+      display: flex
+    
+    .header__burger_state
+      display: flex
+
+@media screen and (max-width: 480px)
+  .header
+    .header__item:last-child
+      min-width: 120px      
+
+@media screen and (max-width: 345px)
+  .header
+    .header__wrapper
+      flex-direction: column
+
+    .header__list
+      flex: 1
+      justify-content: center
+    .logo
+      margin: 0 auto
+
+/* Head */
+
+.head 
+  background: url('../img/background.png')
+  background-size: cover
+  background-position: center 
+  min-height: 90vh
+
+  .head__wrapper
+    display: flex
+    flex-direction: column
+    align-items:center
+  
+  .head__header
+    text-align: center
+    color: white
+    font-size: 5rem
+    margin: 5% 0 0 0
+
+  .head__text
+    text-align: center
+    font-weight: 400
+
+  .head__description
+    font-size: 1.3rem
+    color: $color
+
+  .head__version
+    font-size: 0.9rem
+    color: #848e97
+    margin: 0
+    text-transform: uppercase
+
+/* Trial */
+
+.trial
+  
+  .trial__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+  
+  .trail__button
+    position: relative
+    transform: translateY(-50%)
+    width: 30%
+    min-width: 240px
+    padding: 15px
+
+  .trial__period
+    color: #848e97
+    margin-top: 0
+
+  .trial__header
+    text-align: center
+    font-size: 3.5rem
+    font-weight: 700
+    color: #635c73
+    text-transform: uppercase
+  
+  .trial__paragraph
+    margin-top: 0
+    width: 70%
+    text-align: center
+    color: #323232
+
+.trial__github-container
+  margin: 15px 0 50px 0
+
+.github-container
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  align-items:center
+  
+  .github-container__box
+    border: 1px solid silver
+    display: flex
+    margin-right: 5px
+    border-radius: 3px
+    font-size: 0.8rem
+  
+  .github-container:last-child
+    margin-right: 0
+  
+  .github-container__box div,
+  .github-container__box span
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .github-container__box div
+    min-width: 70px
+    padding: 5px 0
+    border-right: 1px solid silver
+    background: #f3f3f3
+
+  .github-container__box span 
+    min-width: 50px
+    padding: 5px 0
+
+  .github-container__box div img
+    height: 15px
+    margin-right: 5px
+    vertical-align: middle
+
+@media screen and (max-width: 480px)
+  .trial
+    .trial__header
+      font-size: 2.5rem
+
+  .github-container
+    flex-direction: column
+    align-items: center
+    
+    .github-container__box
+      margin: 10px
+
+/*Features*/
+
+.features 
+  min-height: 100vh
+  background: #f4f4f4
+  position: relative
+
+  .features__wrapper 
+    display: flex
+
+.items-container
+  display: flex
+  flex-direction: column
+  flex-basis: 50%
+  justify-content: space-around
+
+  .items-container__item
+    margin-top: 30px
+    display: flex
+  
+  .items-container__img-container
+    min-width: 120px
+ 
+  .items-container__header
+    margin: 0
+
+.features__title-block
+  display: flex
+  flex-direction: column
+  flex-basis: 50%
+
+  .features__header
+    color: $color
+    font-size: 3rem
+    text-align: center
+  
+  .features__editor
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 85%
+    transform: translate(50%, 50px)
+
+@media screen and (max-width: 768px)
+  .features 
+    .features__wrapper
+      flex-direction: column
+    
+    .items-container
+      flex-basis: 100%
+
+    .features__title-block
+      order: -1
+      flex-basis: 0
+
+    .features__editor
+      display: none
+/* Socials */
+
+.social
+
+  .social__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+
+  .social__line
+    width: 70%
+    border: 1px solid #f4f4f4
+
+
+.workers
+  margin: 50px 0
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  .workers__worker
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 20px
+  
+  .workers__name-info
+    display: flex
+    flex-direction: column
+    margin-left: 15px
+
+  .workers__name-info:first-child
+    color: #635c73
+    font-size: 1.5rem
+    font-weight: 700
+
+  .workers__name-info:last-child
+    color: #8d81ac
+  
+  .workers__name
+    font-size: 1.1rem
+    font-weight: 700
+
+  .workers__profession
+    font-size: 0.9
+
+  .workers__worker-info
+    justify-content: center
+    display: flex
+    align-items: center
+
+  .workers__paragraph
+    flex-basis: 70%
+    text-align: center
+    font-weight: bold
+
+  .workers__span
+    color: #8d81ac
+  
+  .workers__sign-container
+    font-size: 1.5rem
+    flex-basis: 10%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .workers__sign
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 50px
+    height: 50px
+    transition-duration: 0.06s
+    cursor: pointer
+
+  .workers__sign:hover
+    border-radius: 50%
+    background-color: silver
+
+  .workers__time-info
+    color: #848e97
+    font-weight: bold
+
+.social__social-links
+  margin: 5% 0
+
+.social-links
+  display: flex
+  justify-content: space-around
+  width: 70%
+  flex-wrap: wrap
+  
+  .social-links__box
+    display: flex
+    flex-basis: 30% 
+    min-width: 150px
+    flex-direction: column
+    flex-wrap: wrap
+
+  .social-links__anchor
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 40px
+    padding: 5px
+    color: white
+    border-radius: 3px
+    font-size: 1.2rem
+    font-weight: bold
+    line-height: 2.2rem
+    position: relative
+
+  div:first-child a
+    background: #f3f3f3
+    color: black
+
+
+  div:first-child a:before 
+    content: url('../img/git.svg')
+  
+  div a:before 
+    position: absolute
+    left: 15px
+
+  div:nth-child(2) a 
+    background: #26a6d1
+
+  div:nth-child(2) a:before 
+    content: url('../img/bird.svg')
+
+  div:last-child a 
+    background: #3b5998
+
+  div:last-child a:before
+    content: url('../img/f.svg')
+
+  .social-links__followers
+    color: #848e97
+    font-weight: bold
+    margin-top: 15px
+    text-align: center
+
+@media screen and (max-width: 1024px) 
+  .social-links
+    width: 90%
+    
+    .social-links__box
+      min-width: 130px
+      flex-basis: 28%
+
+@media screen and (max-width: 768px)
+  .social-links
+    div a:before 
+      left: 6px
+
+@media screen and (max-width: 480px)
+  .workers
+    .workers__worker
+      .workers_img
+        height: 60px
+
+    .workers__worker-info
+      .workers__paragraph
+        flex-basis: 80%
+    
+      .workers__sign-container
+        flex-basis: 15% 
+  .social-links
+    .social-links__box
+      flex-basis: 80%
+
+/* Testimonails*/
+
+.testimonials
+  background-image: url('../img/fifth-page-background.png')
+  background-size: 100% 95% 
+  background-color: #4a3c4e
+  min-height: 100vh
+  background-repeat: no-repeat
+
+  .testimonials__wrapper
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items:center
+    justify-content: space-around
+    color: white
+
+  .testimonials__header
+    font-size: 3rem
+    text-align: center
+  
+  .testimonials__box-container
+    justify-content: space-around
+
+  .testimonials__box
+    flex-basis: 30%
+    align-items: center
+    min-height: 170px
+    min-width: 250px
+    margin-top: 5%
+
+  .testimonials__logo-box
+    height: 64px
+
+  .testimonials__comment
+    text-align: center
+    font-style: italic
+    font-weight: 700
+  
+  .testimonials__line
+    width: 80%
+    margin: 15px
+    border: 1px solid #645766
+
+@media screen and (max-width: 1024px) 
+  .testimonials
+    .testimonials__box
+      min-width: 220px
+
+@media screen and (max-width: 768px)
+  .testimonials
+    background-position: top
+    background-size: 1200px 800px
+    
+    .testimonials__box
+      flex-basis: 46%
+
+@media screen and (max-width: 480px)
+  .testimonials
+    background-size: 1400px 1000px 
+
+/*Pricing*/
+
+.pricing
+  background-color: #4a3c4e
+  background-image: url('../img/sixth-page-background.png')
+  background-size: cover
+  min-height: 100vh
+
+  .pricing__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    min-height: 100vh
+  
+  .pricing__header
+    color: white
+    font-size: 3rem
+    margin: 0
+    text-align: center
+  
+  .pricing__add-info
+    color: #87778a
+    font-size: 0.7rem
+    margin: 0px
+    text-align: center
+    margin: 20px 0
+
+
+  .pricing__box-container
+    justify-content: space-around
+    width: 100%
+
+  .pricing__box
+    margin-top: 25px
+    align-items: center
+    flex-basis: 23%
+    min-height: 400px
+    min-width: 180px
+    transition-duration: 1s
+
+  .pricing__box:hover
+    transform: scale(1.1)
+    background: rgba(0,0,0, 0.2)
+
+  .pricing__box-header
+    background: rgba(255,255,255, 0.1)
+    width: 100%
+    color: white
+    text-transform: uppercase
+    text-align: center
+    padding: 5px
+    box-sizing: border-box
+
+  .pricing__box-info
+    justify-content: space-around
+    align-items: center
+    background: rgba(255,255,255, 0.05)
+    width: 100%
+    height: 100%
+
+  .pricing__text_style
+    color: white
+    text-align: center
+
+  .pricing__price
+    font-size: 3rem
+
+  .pricing__month
+    opacity: 0.3
+    text-transform: uppercase
+
+  .pricing__line
+    width: 30%
+    border: 1pz solid $color
+
+  .pricing__description
+    width: 100%
+    min-height: 15%
+    align-items: center
+    justify-content: space-between
+
+  .pricing__button
+    opacity: 0.8
+    min-width: 70%
+    padding: 10px
+
+@media screen and (max-width: 1024px)
+  .pricing
+    .pricing__box
+      flex-basis: 20%
+      min-width: 175px
+
+@media screen and (max-width: 768px)
+  .pricing
+    background-position: center
+
+    .pricing__box
+      flex-basis: 46%
+
+@media screen and (max-width: 480px)
+  .pricing
+    .pricing__box
+      flex-basis: 70%
+
+/* Subscription */
+
+.subscription
+  background-color: #f4f4f4
+
+  .subscription__wrapper
+    display: flex
+    align-items: center
+    min-height: 20vh
+    flex-wrap: wrap
+
+  .subscription__header
+    color: #635c73
+    font-size: 1.5rem
+    text-align: center
+
+  .subscription__form
+    flex: 1
+    display: flex
+    justify-content: flex-end
+
+  .subscription__input
+    margin: 10px 0
+    border: 1px solid silver
+    border-radius: 30px
+    width: 40%
+    min-width: 150px
+    padding: 10px 15px
+    height: 45px
+    box-sizing: border-box
+
+  .subscription__button
+    margin: 10px 0 10px 2%
+    width: 30%
+    min-width: 120px
+    padding: 10px
+    height: 45px
+@media screen and (max-width: 768px)
+  .subscription
+    .subscription__wrapper
+      display: block
+
+    .subscription__form
+      justify-content: space-between
+
+    .subscription__input
+      flex-basis: 60%
+
+    .subscription__button
+      flex-basis: 30%
+
+/* Links */
+.links
+
+  .links__wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 30px
+
+    .links__box
+      flex-basis: 31%
+
+    .links__btn
+      background-color: #f4f4f4
+      width: 150px
+      padding: 5px
+      height: 35px
+      border-radius: 6px
+      margin: 40px 0
+
+      .links__anchor
+        height: 100%
+        color: $color
+        display: flex
+        justify-content: center
+        align-items: center
+
+
+    .links__header
+      color: #d3d1da
+
+    .links__text
+      color: #848e97
+
+    .links__subheader
+      color: $color
+
+  .links__line
+    border: 2px solid #f4f4f4
+    margin: 20px
+
+@media screen and (max-width: 1024px)
+  .links
+    .links__wrapper
+      .links__box
+        flex-basis: 32%
+
+@media screen and (max-width: 768px)
+  .links
+    .links__wrapper
+      .links__box
+        flex-basis: 100%
+
+/* Footer */
+
+.footer
+  display: flex
+  justify-content: center
+  min-height: 30vh
+  align-items: center
+
+  .footer__wrapper
+    justify-content: space-between
+
+  .footer__box
+    font-size: 0.9rem
+    font-weight: 700
+    color: #848e97
+
+  .footer__box:first-child 
+    flex-basis: 30% 
+    min-width: 190px
+
+  .footer__box:nth-child(2) 
+    flex-basis: 15% 
+    min-width: 120px
+
+  .footer__title
+    margin: 0
+    padding: 0
+    color: #323232
+
+  .footer__list-item_font-style
+    color: #8d81ac
+
+  .footer__box:nth-child(3) 
+    flex-basis: 20%
+    min-width: 190px
+
+  .footer__gap
+    margin-bottom: 20px
+
+  .footer__phone-number
+    font-size: 1.6rem
+    font-weight: 700
+    color: #323232
+
+  .footer__city_font-style
+    font-size: 1.3rem
+    font-weight: 700
+    margin: 10px 0
+    color: #323232
+
+  .footer__box:last-child
+    flex-basis: 25%
+
+@media screen and (max-width: 768px)
+  .footer
+    .footer__box:first-child,
+    .footer__box:nth-child(2),
+    .footer__box:nth-child(3),
+    .footer__box:last-child
+      flex-basis: 100%
+
+    .footer__box:first-child
+      margin-top: 5%
+    
+    .footer__box:last-child
+      margin: 10px 0 5% 0
+    
+    .footer__box:nth-child(2),
+    .footer__box:nth-child(3)
+      margin: 10px 0
