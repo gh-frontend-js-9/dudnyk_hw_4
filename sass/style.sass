@@ -3,11 +3,13 @@
 $font: 'Montserrat', sans-serif
 $color: #8d81ac
 
-.html 
-  font-size: 16px
+//would be great if you split up the file into multiple files
+.html
+  font-size: 16px // apply to body instead
 
+//according to mobile first approach -- you should be using min-width where possible
 @media screen and (max-width: 480px)
-  .html 
+  .html
     font-size: 14px
 
 .page
@@ -18,7 +20,7 @@ $color: #8d81ac
 
 .list
     padding: 0
-    list-style-type: none 
+    list-style-type: none
 
 .anchor
   text-decoration: none
@@ -38,10 +40,10 @@ $color: #8d81ac
   margin: 0 auto
 
 @media screen and (max-width: 1024px)
-  .container 
+  .container
     width: 95%
 
-.logo  
+.logo
   text-transform: uppercase
   display: flex
   align-items: center
@@ -49,7 +51,7 @@ $color: #8d81ac
   font-family: 'Lato', sans-serif
   font-size: 1.8rem
   font-weight: bold
-  
+
   span
     color: $color
 
@@ -57,14 +59,14 @@ $color: #8d81ac
     content: url('../img/Shape1.svg')
     margin-top: 5px
 
-.box-container 
+.box-container
   display: flex
   flex-wrap: wrap
 
 .box
   display: flex
   flex-direction: column
-    
+
 
 /*header navigation*/
 
@@ -77,7 +79,7 @@ $color: #8d81ac
     display: flex
     flex: 1
     justify-content: flex-end
-  
+
   .header__burger
     display: flex
     justify-content: center
@@ -85,29 +87,29 @@ $color: #8d81ac
 
   .header__line,
   .header__line:after,
-  .header__line:before 
+  .header__line:before
     width: 25px
     height: 3px
     background: black
     border-radius: 5px
-  
+
   .header__line:after,
-  .header__line:before 
+  .header__line:before
     content: ""
     position: absolute
-    
+
   .header__line:before
     margin-left: 7px
     width: 18px
-    transform: translateY(-10px)       
-  
-  .header__line:after  
+    transform: translateY(-10px)
+
+  .header__line:after
     transform: translateY(10px)
-  
+
   .header__burger_state
     display: none
 
-  .header__list   
+  .header__list
     display: flex
     flex: 1
     justify-content: flex-end
@@ -117,8 +119,8 @@ $color: #8d81ac
     align-self: center
     flex-basis: 15%
     text-align: center
-    padding: 5px 
-  
+    padding: 5px
+
   .header__anchor
     color: $color
 
@@ -130,20 +132,20 @@ $color: #8d81ac
   .header
     .header__list
       flex: 0
-    
+
     .header__item
       display: none
 
     .header__item:last-child
       display: flex
-    
+
     .header__burger_state
       display: flex
 
 @media screen and (max-width: 480px)
   .header
     .header__item:last-child
-      min-width: 120px      
+      min-width: 120px
 
 @media screen and (max-width: 345px)
   .header
@@ -158,17 +160,17 @@ $color: #8d81ac
 
 /* Head */
 
-.head 
+.head
   background: url('../img/background.png')
   background-size: cover
-  background-position: center 
+  background-position: center
   min-height: 90vh
 
   .head__wrapper
     display: flex
     flex-direction: column
-    align-items:center
-  
+    align-items: center
+
   .head__header
     text-align: center
     color: white
@@ -192,12 +194,12 @@ $color: #8d81ac
 /* Trial */
 
 .trial
-  
+
   .trial__wrapper
     display: flex
     flex-direction: column
     align-items: center
-  
+
   .trail__button
     position: relative
     transform: translateY(-50%)
@@ -215,7 +217,7 @@ $color: #8d81ac
     font-weight: 700
     color: #635c73
     text-transform: uppercase
-  
+
   .trial__paragraph
     margin-top: 0
     width: 70%
@@ -229,18 +231,18 @@ $color: #8d81ac
   display: flex
   justify-content: center
   flex-wrap: wrap
-  align-items:center
-  
+  align-items: center
+
   .github-container__box
     border: 1px solid silver
     display: flex
     margin-right: 5px
     border-radius: 3px
     font-size: 0.8rem
-  
+
   .github-container:last-child
     margin-right: 0
-  
+
   .github-container__box div,
   .github-container__box span
     display: flex
@@ -253,7 +255,7 @@ $color: #8d81ac
     border-right: 1px solid silver
     background: #f3f3f3
 
-  .github-container__box span 
+  .github-container__box span
     min-width: 50px
     padding: 5px 0
 
@@ -270,18 +272,18 @@ $color: #8d81ac
   .github-container
     flex-direction: column
     align-items: center
-    
+
     .github-container__box
       margin: 10px
 
 /*Features*/
 
-.features 
+.features
   min-height: 100vh
   background: #f4f4f4
   position: relative
 
-  .features__wrapper 
+  .features__wrapper
     display: flex
 
 .items-container
@@ -293,10 +295,10 @@ $color: #8d81ac
   .items-container__item
     margin-top: 30px
     display: flex
-  
+
   .items-container__img-container
     min-width: 120px
- 
+
   .items-container__header
     margin: 0
 
@@ -309,7 +311,7 @@ $color: #8d81ac
     color: $color
     font-size: 3rem
     text-align: center
-  
+
   .features__editor
     position: absolute
     bottom: 0
@@ -318,10 +320,10 @@ $color: #8d81ac
     transform: translate(50%, 50px)
 
 @media screen and (max-width: 768px)
-  .features 
+  .features
     .features__wrapper
       flex-direction: column
-    
+
     .items-container
       flex-basis: 100%
 
@@ -357,7 +359,7 @@ $color: #8d81ac
     justify-content: center
     align-items: center
     margin-bottom: 20px
-  
+
   .workers__name-info
     display: flex
     flex-direction: column
@@ -370,7 +372,7 @@ $color: #8d81ac
 
   .workers__name-info:last-child
     color: #8d81ac
-  
+
   .workers__name
     font-size: 1.1rem
     font-weight: 700
@@ -390,7 +392,7 @@ $color: #8d81ac
 
   .workers__span
     color: #8d81ac
-  
+
   .workers__sign-container
     font-size: 1.5rem
     flex-basis: 10%
@@ -423,10 +425,10 @@ $color: #8d81ac
   justify-content: space-around
   width: 70%
   flex-wrap: wrap
-  
+
   .social-links__box
     display: flex
-    flex-basis: 30% 
+    flex-basis: 30%
     min-width: 150px
     flex-direction: column
     flex-wrap: wrap
@@ -449,20 +451,20 @@ $color: #8d81ac
     color: black
 
 
-  div:first-child a:before 
+  div:first-child a:before
     content: url('../img/git.svg')
-  
-  div a:before 
+
+  div a:before
     position: absolute
     left: 15px
 
-  div:nth-child(2) a 
+  div:nth-child(2) a
     background: #26a6d1
 
-  div:nth-child(2) a:before 
+  div:nth-child(2) a:before
     content: url('../img/bird.svg')
 
-  div:last-child a 
+  div:last-child a
     background: #3b5998
 
   div:last-child a:before
@@ -474,17 +476,17 @@ $color: #8d81ac
     margin-top: 15px
     text-align: center
 
-@media screen and (max-width: 1024px) 
+@media screen and (max-width: 1024px)
   .social-links
     width: 90%
-    
+
     .social-links__box
       min-width: 130px
       flex-basis: 28%
 
 @media screen and (max-width: 768px)
   .social-links
-    div a:before 
+    div a:before
       left: 6px
 
 @media screen and (max-width: 480px)
@@ -496,9 +498,9 @@ $color: #8d81ac
     .workers__worker-info
       .workers__paragraph
         flex-basis: 80%
-    
+
       .workers__sign-container
-        flex-basis: 15% 
+        flex-basis: 15%
   .social-links
     .social-links__box
       flex-basis: 80%
@@ -507,7 +509,7 @@ $color: #8d81ac
 
 .testimonials
   background-image: url('../img/fifth-page-background.png')
-  background-size: 100% 95% 
+  background-size: 100% 95%
   background-color: #4a3c4e
   min-height: 100vh
   background-repeat: no-repeat
@@ -523,7 +525,7 @@ $color: #8d81ac
   .testimonials__header
     font-size: 3rem
     text-align: center
-  
+
   .testimonials__box-container
     justify-content: space-around
 
@@ -541,13 +543,13 @@ $color: #8d81ac
     text-align: center
     font-style: italic
     font-weight: 700
-  
+
   .testimonials__line
     width: 80%
     margin: 15px
     border: 1px solid #645766
 
-@media screen and (max-width: 1024px) 
+@media screen and (max-width: 1024px)
   .testimonials
     .testimonials__box
       min-width: 220px
@@ -556,13 +558,13 @@ $color: #8d81ac
   .testimonials
     background-position: top
     background-size: 1200px 800px
-    
+
     .testimonials__box
       flex-basis: 46%
 
 @media screen and (max-width: 480px)
   .testimonials
-    background-size: 1400px 1000px 
+    background-size: 1400px 1000px
 
 /*Pricing*/
 
@@ -578,13 +580,13 @@ $color: #8d81ac
     align-items: center
     justify-content: space-around
     min-height: 100vh
-  
+
   .pricing__header
     color: white
     font-size: 3rem
     margin: 0
     text-align: center
-  
+
   .pricing__add-info
     color: #87778a
     font-size: 0.7rem
@@ -789,12 +791,12 @@ $color: #8d81ac
     font-weight: 700
     color: #848e97
 
-  .footer__box:first-child 
-    flex-basis: 30% 
+  .footer__box:first-child
+    flex-basis: 30%
     min-width: 190px
 
-  .footer__box:nth-child(2) 
-    flex-basis: 15% 
+  .footer__box:nth-child(2)
+    flex-basis: 15%
     min-width: 120px
 
   .footer__title
@@ -805,7 +807,7 @@ $color: #8d81ac
   .footer__list-item_font-style
     color: #8d81ac
 
-  .footer__box:nth-child(3) 
+  .footer__box:nth-child(3)
     flex-basis: 20%
     min-width: 190px
 
@@ -836,10 +838,10 @@ $color: #8d81ac
 
     .footer__box:first-child
       margin-top: 5%
-    
+
     .footer__box:last-child
       margin: 10px 0 5% 0
-    
+
     .footer__box:nth-child(2),
     .footer__box:nth-child(3)
       margin: 10px 0
